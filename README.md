@@ -24,10 +24,13 @@ Check out the following resources if this topic is new:
 7. Send email for immediate notifications with CSP-Violation
 8. Write CSP-Violation into local log
 
-## CSP … use cases
+## CSP use cases
 1. Immediately getting aware of violations against Content Security Policy
 2. Analyzing impact of blocked content on the customer experience
 3. Remain informed on a multiple author website if some implement insecure content
+
+## CSP Response header implementation
+<script src="https://gist.github.com/mikeg-de/e0eab64217d6c2c51a9dc890a6e107de.js"></script>
 
 ### Prerequisites
 1. A fully encrypted website
