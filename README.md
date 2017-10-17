@@ -28,6 +28,12 @@ Check out the following resources if this topic is new:
 1. Immediately getting aware of violations against Content Security Policy
 2. Analyzing impact of blocked content on the customer experience
 3. Remain informed on a multiple author website if some implement insecure content
+4. Prevent injections i.e. from browser plugins
+
+### Example of blocked resource from CSP-Violation
+`Blocked-uri: https://data1.routenplaner-karten.com 
+Violated-directive: script-src https://timbrado.de data: 'unsafe-inline' 'unsafe-eval' https://*.timbrado.de https://*.google-analytics.com https://*.googletagmanager.com https://*.google.com https://*.googleapis.com https://*.gstatic.com https://*.jquery.com https://*.videopress.com*`
+
 
 ## CSP Response header implementation
 [CSP definition for Nginx which leverages $server_name](https://gist.github.com/mikeg-de/e0eab64217d6c2c51a9dc890a6e107de.js)
