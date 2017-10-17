@@ -30,7 +30,7 @@ Check out the following resources if this topic is new:
 3. Remain informed on a multiple author website if some implement insecure content
 
 ## CSP Response header implementation
-<script src="https://gist.github.com/mikeg-de/e0eab64217d6c2c51a9dc890a6e107de.js"></script>
+[CSP definition for Nginx which leverages $server_name](https://gist.github.com/mikeg-de/e0eab64217d6c2c51a9dc890a6e107de.js)
 
 ### Prerequisites
 1. A fully encrypted website
