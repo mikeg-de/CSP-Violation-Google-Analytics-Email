@@ -12,6 +12,7 @@ $log_file_size_limit = 1000000; // bytes - once exceeded no further entries are 
 $recepient_email = "YOUR@EMAIL";
 $sender_email = "SENDER@EMAIL";
 $email_subject = "Content-Security-Policy violation";
+$client  = $_SERVER['REMOTE_ADDR']; // Warning: Do not send this to Google Analytics!
 // End configuration
 
 $current_domain = preg_replace("/www\./i", "", $_SERVER["SERVER_NAME"]);
@@ -93,8 +94,9 @@ if ($json_data = json_decode($json_data, true)) {
         $message = "The following Content-Security-Policy violation occurred on " .
         $current_domain . ":\n\n" .
         "Document-uri: {$json_data["csp-report"]["document-uri"]} \n" .
-        "Referrer: {$json_data["csp-report"]["referrer"]} \n\n" .
-
+        "Referrer: {$json_data["csp-report"]["referrer"]} \n" .
+        "Client IP: $client \n\n" .
+		
         "Blocked-uri: {$json_data["csp-report"]["blocked-uri"]} \n" .
         "Violated-directive: {$json_data["csp-report"]["violated-directive"]} \n" .
         "Effective-directive: {$json_data["csp-report"]["effective-directive"]} \n\n" .
